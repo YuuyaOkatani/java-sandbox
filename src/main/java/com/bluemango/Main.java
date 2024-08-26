@@ -11,11 +11,11 @@ public class Main {
        System.out.print("Entre com um número inteiro: ");  // solicitando um número inteiro ao usuário
        int num = sc.nextInt(); 
 
-       if(num < 0){
-        System.out.println("NEGATIVO");
+       if(num % 2 ==0){
+        System.out.println("PAR");
        }
        else{
-        System.out.println("NÃO NEGATIVO");
+        System.out.println("IMPAR");
        }
 
 
