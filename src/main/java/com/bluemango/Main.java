@@ -8,13 +8,12 @@ public class Main {
         
        Scanner sc = new Scanner(System.in); 
 
-       System.out.print("Digite o primeiro número: ");
-       int a = sc.nextInt(); 
-       System.out.print("Digite o segundo número: ");
-       int b = sc.nextInt();
+       System.out.println("Digite o primeiro, segundo e terceiro nome: ");
+       String firstName = sc.nextLine(); 
+       String secondName = sc.nextLine(); 
+       String thirdName = sc.nextLine();
+       System.out.println("Nome completo: " + firstName + " " + secondName + " " + thirdName);
 
-       int sum = a + b;
-       System.out.println("The sum of " + a + " and " + b + " is: " + sum);
 
        sc.close();
     }
