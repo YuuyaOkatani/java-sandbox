@@ -8,15 +8,27 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Primeiro horário: "); // solicitando um número inteiro ao usuário
-        int a = sc.nextInt();
+        int horarioInicial = sc.nextInt();
         System.out.print("Segundo horário: "); // solicitando um número inteiro ao usuário
-        int b = sc.nextInt();
+        int horarioFinal = sc.nextInt();
+        int horarioTotal;
 
-        if (a % b == 0 || b % a == 0) {
-            System.out.println("São multiplos");
+        if (horarioInicial > horarioFinal) {
+            horarioTotal = 24 - horarioInicial + horarioFinal;
+
         } else {
-            System.out.println("Não são multiplos");
+            horarioTotal = horarioInicial - horarioFinal;
+            // imprimindo o resultado
         }
+
+        if(horarioTotal == 0) {
+            horarioTotal = 24; 
+        }
+
+
+
+        System.out.println("O jogo durou " + horarioTotal + " horas");
+     
 
         sc.close();
     }
