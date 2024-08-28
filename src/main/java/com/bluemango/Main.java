@@ -7,27 +7,38 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Primeiro horário: "); // solicitando um número inteiro ao usuário
-        int horarioInicial = sc.nextInt();
-        System.out.print("Segundo horário: "); // solicitando um número inteiro ao usuário
-        int horarioFinal = sc.nextInt();
-        int horarioTotal;
+        int num = sc.nextInt(); 
+        int num2 = sc.nextInt();
+        double result = 0;
 
-        if (horarioInicial > horarioFinal) {
-            horarioTotal = 24 - horarioInicial + horarioFinal;
+        switch (num) {
+            case 1:
+            result = 4 * num2; 
+            
+            break;
+            case 2:
+            result = 4.50 * num2; 
+            
 
-        } else {
-            horarioTotal = horarioInicial - horarioFinal;
-            // imprimindo o resultado
+            break;
+            case 3:
+            result = 5 * num2;
+
+            break;
+            case 4:
+            result = 2 * num2;
+
+            break;
+            case 5:
+            result = 1.50 * num2;
+
+            break;
+        
         }
 
-        if(horarioTotal == 0) {
-            horarioTotal = 24; 
-        }
+        System.out.printf("Total: R$ %.2f%n" , result); // nunca se esqueça disso 
 
 
-
-        System.out.println("O jogo durou " + horarioTotal + " horas");
      
 
         sc.close();
