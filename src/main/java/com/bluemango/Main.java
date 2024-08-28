@@ -7,16 +7,39 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        int senha = sc.nextInt(); 
+        System.out.print("Digite o X: "); 
+        int x = sc.nextInt();
+        System.out.print("Digite o Y: ");
+        int y = sc.nextInt();
 
-        while (senha != 2002) {
-            System.out.println("Senha invalida!");
-            System.out.print("Tente novamente: ");
-            senha = sc.nextInt();
+        while (x != 0 && y != 0) {
+            if(x > 0 && y > 0) {
+                System.out.println("Primeiro");
+                
+
+            }
+            else if(x < 0 && y > 0) {
+                System.out.println("Segundo");
+                
+
+            }
+            else if(x < 0 && y < 0) {
+                System.out.println("Terceiro");
+                
+
+            }
+            else if (x > 0 && y < 0) {
+                System.out.println("Quarto");
+            
+            }
+            System.out.print("Digite o X: ");
+            x = sc.nextInt();
+            System.out.print("Digite o Y: ");
+            y = sc.nextInt();
             
         }
 
-        System.out.println("Acesso permitido! ");
+  
 
 
         
