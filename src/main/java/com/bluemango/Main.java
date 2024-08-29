@@ -7,40 +7,14 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Digite o X: "); 
-        int x = sc.nextInt();
-        System.out.print("Digite o Y: ");
-        int y = sc.nextInt();
+        int num = sc.nextInt(); 
 
-        while (x != 0 && y != 0) {
-            if(x > 0 && y > 0) {
-                System.out.println("Primeiro");
-                
+        for(int i = 1; i < num; i++) {
+            if(num % i != 0 && i % 2 != 0) {
+                System.out.println(i);
+            }
 
-            }
-            else if(x < 0 && y > 0) {
-                System.out.println("Segundo");
-                
-
-            }
-            else if(x < 0 && y < 0) {
-                System.out.println("Terceiro");
-                
-
-            }
-            else if (x > 0 && y < 0) {
-                System.out.println("Quarto");
-            
-            }
-            System.out.print("Digite o X: ");
-            x = sc.nextInt();
-            System.out.print("Digite o Y: ");
-            y = sc.nextInt();
-            
         }
-
-  
-
 
         
      
