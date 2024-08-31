@@ -6,25 +6,30 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Digite o npumero de elementos: ");
-        int num = sc.nextInt(); // número de elementos dentro de um vetor
-        double[] vect = new double[num]; // um vetor
+        System.out.print("How many roos will be rented? : ");
 
-        for(int i = 0; i < num; i++) {
-            System.out.print("Digite um número: ");  // pedir um número para colocar dentro do vetor
-            vect[i] = sc.nextDouble(); // colocar um número dentro do vetor
+        int roos = sc.nextInt();
+
+        newRoom[] rooms = new newRoom[roos]; 
+
+        for(int i = 0; i < roos; i++){
+            
+            System.out.print("Digite o nome de quem irá usar o quarto: "); 
+            String name = sc.next(); 
+            System.out.print("Digite o email do usuário: "); 
+            String email = sc.next();
+            System.out.print("Digite o número do quarto: "); 
+            int num = sc.nextInt();
+
+            rooms[i] = new newRoom(num, name, email);
+        }
+        System.out.println("Busy rooms: "); 
+        for(newRoom room : rooms){
+            System.out.println(room.getId() + ": " + room.getName()+ ", " + room.getEmail()); 
+            
 
         }
-        System.out.print("Numeros do vetor: "); 
-
-        for( double n : vect) {
-            System.out.print(n + " ");  // imprimir todos os números do vetor
-        }
-
-        // este bloco de comando pode ser muito util no futuro.
-        // Isso é mesmo muito empolgante HAHHhhahha. 
-
-
+        
 
 
         
