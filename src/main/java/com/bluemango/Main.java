@@ -6,15 +6,26 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o npumero de elementos: ");
+        int num = sc.nextInt(); // número de elementos dentro de um vetor
+        double[] vect = new double[num]; // um vetor
 
-        int num = sc.nextInt(); 
-
-        for(int i = 1; i < num; i++) {
-            if(num % i != 0 && i % 2 != 0) {
-                System.out.println(i);
-            }
+        for(int i = 0; i < num; i++) {
+            System.out.print("Digite um número: ");  // pedir um número para colocar dentro do vetor
+            vect[i] = sc.nextDouble(); // colocar um número dentro do vetor
 
         }
+        System.out.print("Numeros do vetor: "); 
+
+        for( double n : vect) {
+            System.out.print(n + " ");  // imprimir todos os números do vetor
+        }
+
+        // este bloco de comando pode ser muito util no futuro.
+        // Isso é mesmo muito empolgante HAHHhhahha. 
+
+
+
 
         
      
