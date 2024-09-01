@@ -42,6 +42,18 @@ public class newRoom {
         this.email = email;
     }
 
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return id + ": " + name + ", " + email;
+    }
+
+    
+
+
+
+
     
     
 }

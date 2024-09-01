@@ -10,7 +10,7 @@ public class Main {
 
         int roos = sc.nextInt();
 
-        newRoom[] rooms = new newRoom[roos]; 
+        newRoom[] rooms = new newRoom[10]; 
 
         for(int i = 0; i < roos; i++){
             
@@ -21,11 +21,14 @@ public class Main {
             System.out.print("Digite o número do quarto: "); 
             int num = sc.nextInt();
 
-            rooms[i] = new newRoom(num, name, email);
+            rooms[num] = new newRoom(num, name, email);
         }
+        
         System.out.println("Busy rooms: "); 
-        for(newRoom room : rooms){
-            System.out.println(room.getId() + ": " + room.getName()+ ", " + room.getEmail()); 
+        for(int i = 0; i < rooms.length; i++){
+            if(rooms[i] != null){
+                System.out.println(rooms[i]); 
+            }
             
 
         }
