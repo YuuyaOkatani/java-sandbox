@@ -6,37 +6,44 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("How many roos will be rented? : ");
+        System.out.print("How many employees will be registered?: ");
 
-        int roos = sc.nextInt();
+        int num = sc.nextInt();
 
-        newRoom[] rooms = new newRoom[10]; 
+ 
 
-        for(int i = 0; i < roos; i++){
+        List<employee> employees = new ArrayList<>(); 
+
+        for (int i = 0; i < num; i++) {
             
-            System.out.print("Digite o nome de quem irá usar o quarto: "); 
-            String name = sc.next(); 
-            System.out.print("Digite o email do usuário: "); 
-            String email = sc.next();
-            System.out.print("Digite o número do quarto: "); 
-            int num = sc.nextInt();
+            System.out.println("Employee #" + i + ": ");
+            System.out.print("ID: ");
+            int id = sc.nextInt();
+            System.out.print("Name: ");
+            String name = sc.next();
+            System.out.print("Salary: ");
+            double salary = sc.nextDouble();
 
-            rooms[num] = new newRoom(num, name, email);
-        }
-        
-        System.out.println("Busy rooms: "); 
-        for(int i = 0; i < rooms.length; i++){
-            if(rooms[i] != null){
-                System.out.println(rooms[i]); 
-            }
+            employee e = new employee(id, name, salary);
+            employees.add(e);
+
+            
             
 
+
         }
+
+        // System.out.print("Enter the employee that will have salary increase: ");
+        // final id = sc.nextInt();
+        // Optional<employee> e = employees.stream().filter(x -> x.getId() == id).findFirst();
+        
+        // if(e != null){
+        //     System.out.print("Enter the percentage: ");
+
+        // }
+        
         
 
-
-        
-     
 
         sc.close();
     }
